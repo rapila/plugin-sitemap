@@ -1,0 +1,13 @@
+# example configuration of a typical sitemap
+# include in template with {{navigation=sitemap}}
+
+navigations:
+  sitemap:
+    exclude_duplicates: true
+    show_hidden: true
+    0:
+      - {template_inline: '<ul><li><a href="{{link}}">{{title}}</a><ul>{{children}}</ul></li></ul>'}
+    all:
+      - {template_inline: '<li class="level_{{level}}"><a class="{{name}}" href="{{link}}">{{title}}</a><ul>{{children}}</ul></li>'}
+    4:
+      - show: false
