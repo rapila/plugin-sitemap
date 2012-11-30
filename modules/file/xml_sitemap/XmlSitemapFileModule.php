@@ -19,7 +19,7 @@ class XmlSitemapFileModule extends FileModule {
 		$oUrl = $this->oXmlDocument->createElement('url');
 		
 		//Location, absolute url
-		$sAbsoluteLink = LinkUtil::absoluteLink(LinkUtil::link($oNavigationItem->getLink(), 'FrontendManager'));
+		$sAbsoluteLink = LinkUtil::absoluteLink(LinkUtil::link($oNavigationItem->getLink(), 'FrontendManager'), null, LinkUtil::isSSL());
 		$oUrl->appendChild($this->element('loc', $sAbsoluteLink));
 
 		//Last modified
